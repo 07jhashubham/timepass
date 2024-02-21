@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import gsap from "gsap";
@@ -14,6 +15,10 @@ const canvas = document.querySelector("canvas.webgl");
 // Scene
 const scene = new THREE.Scene();
 
+const property = {
+  name: prompt("Enter a name: "),
+};
+
 /**
  * Textures
  */
@@ -24,10 +29,10 @@ const colorTexture = textureLoader.load("/textures/matcaps/4.png");
  * Object
  */
 const textMaterial = new THREE.MeshNormalMaterial();
-
+let textGeometry;
 const textLoader = new FontLoader();
 textLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  const textGeometry = new TextGeometry("Shubhangi Singh", {
+  textGeometry = new TextGeometry(property.name, {
     font: font,
     size: 0.5,
     height: 0.2,
