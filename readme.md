@@ -1,4 +1,4 @@
-# Three.js Journey
+# Learn with Monk Jha
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
