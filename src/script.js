@@ -16,8 +16,7 @@ const canvas = document.querySelector("canvas.webgl");
 const scene = new THREE.Scene();
 
 const property = {
-  // name: prompt("Enter a name: "),
-  name: "Shubham Jha",
+  name: prompt("Enter a name: "),
 };
 
 /**
